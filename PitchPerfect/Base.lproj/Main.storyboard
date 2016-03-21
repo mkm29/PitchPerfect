@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Record-->
@@ -107,8 +108,19 @@
                                     <action selector="stopAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="0zd-YJ-a2X"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU9-Vf-KQW">
+                                <rect key="frame" x="43" y="218" width="130" height="100"/>
+                                <state key="normal" image="chipmunk@2x-iphone"/>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="o5o-tR-rsy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mU9-Vf-KQW" firstAttribute="top" secondItem="fbQ-wO-K6o" secondAttribute="bottom" constant="22" id="dYQ-3r-ts3"/>
+                            <constraint firstItem="mU9-Vf-KQW" firstAttribute="leading" secondItem="2MF-lJ-Oxz" secondAttribute="leadingMargin" constant="23" id="wcD-cV-tU9"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -137,6 +149,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk@2x-iphone" width="200" height="200"/>
         <image name="fast@2x-iphone" width="200" height="200"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow@2x-iphone" width="200" height="200"/>
