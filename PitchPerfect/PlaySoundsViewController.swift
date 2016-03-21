@@ -12,20 +12,29 @@ import AVFoundation
 class PlaySoundsViewController: UIViewController {
     
     var audioPlayer = AVAudioPlayer()
+    var recordedAudio: RecordedAudio!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // grab the filepath for the mp3 sound to be played
         
-        if let path = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-            let url = NSURL(fileURLWithPath: path)
+//        if let path = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
+//            let url = NSURL(fileURLWithPath: path)
+//            
+//            do {
+//                // preoare the sound to be played whenever the button is pressed
+//                audioPlayer = try AVAudioPlayer(contentsOfURL: url)
+//                audioPlayer.enableRate = true
+//            } catch {
+//                
+//            }
+//        }
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: recordedAudio.filePath)
+            audioPlayer.enableRate = true
+        } catch {
             
-            do {
-                // preoare the sound to be played whenever the button is pressed
-                audioPlayer = try AVAudioPlayer(contentsOfURL: url)
-            } catch {
-                
-            }
         }
     }
 
@@ -54,7 +63,7 @@ class PlaySoundsViewController: UIViewController {
         audioPlayer.stop()
         audioPlayer.currentTime = 0.0
         audioPlayer.rate = rate
-        audioPlayer.enableRate = true
+        //audioPlayer.enableRate = true
         audioPlayer.play()
     }
     

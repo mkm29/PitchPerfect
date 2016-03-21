@@ -96,5 +96,16 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         try! audioSession.setActive(false)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // pass in the recorded audio
+        if segue.identifier == "stopRecording" {
+            let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
+            
+            // now we must pass in the recordedAudio data
+            let data = sender as! RecordedAudio
+            playSoundsVC.recordedAudio = data
+        }
+    }
+    
 }
 
