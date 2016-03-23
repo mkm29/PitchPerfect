@@ -123,11 +123,24 @@
                                     <action selector="playChipmunkAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="o5o-tR-rsy"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xz3-dO-Ccx">
+                                <rect key="frame" x="225" y="218" width="130" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="FRx-Ed-7qk"/>
+                                    <constraint firstAttribute="height" constant="100" id="eon-LF-OS0"/>
+                                </constraints>
+                                <state key="normal" image="darthvader@2x-iphone"/>
+                                <connections>
+                                    <action selector="playDarthVaderAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="bIR-VN-652"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="hbe-n0-HYb" firstAttribute="leading" secondItem="fbQ-wO-K6o" secondAttribute="trailing" constant="52" id="5no-Ea-20h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xz3-dO-Ccx" secondAttribute="trailing" id="STP-QO-NSf"/>
                             <constraint firstItem="mU9-Vf-KQW" firstAttribute="top" secondItem="fbQ-wO-K6o" secondAttribute="bottom" constant="22" id="dYQ-3r-ts3"/>
+                            <constraint firstItem="xz3-dO-Ccx" firstAttribute="top" secondItem="hbe-n0-HYb" secondAttribute="bottom" constant="22" id="ent-BG-DWC"/>
                             <constraint firstItem="hbe-n0-HYb" firstAttribute="top" secondItem="gJH-Ha-Vka" secondAttribute="bottom" constant="32" id="pH3-Hn-McV"/>
                             <constraint firstItem="mU9-Vf-KQW" firstAttribute="leading" secondItem="2MF-lJ-Oxz" secondAttribute="leadingMargin" constant="23" id="wcD-cV-tU9"/>
                         </constraints>
@@ -160,6 +173,7 @@
     </scenes>
     <resources>
         <image name="chipmunk@2x-iphone" width="200" height="200"/>
+        <image name="darthvader@2x-iphone" width="200" height="200"/>
         <image name="fast@2x-iphone" width="200" height="200"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slow@2x-iphone" width="200" height="200"/>

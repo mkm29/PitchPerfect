@@ -44,24 +44,11 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
-        
-//        var pitchPlayer = AVAudioPlayerNode()
-//        var timePitch = AVAudioUnitTimePitch()
-//        
-//        timePitch.pitch = 1000
-//        
-//        audioEngine.attachNode(pitchPlayer)
-//        audioEngine.attachNode(timePitch)
-//        
-//        // need to create an NSURL from the recordedAudio.filePath
-//        let audioFile = try! AVAudioFile(forReading: recordedAudio.filePath)
-//        
-//        audioEngine.connect(pitchPlayer, to: timePitch, format: audioFile.processingFormat)
-//        audioEngine.connect(timePitch, to: audioEngine.outputNode, format: audioFile.processingFormat)
-//        pitchPlayer.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
-//        try! audioEngine.start()
-//        pitchPlayer.play()
         playChipmunkAudioWithVariablePitch(1000)
+    }
+    
+    @IBAction func playDarthVaderAudio(sender: UIButton) {
+        playChipmunkAudioWithVariablePitch(-1000)
     }
     
     func playChipmunkAudioWithVariablePitch(pitch: Float) {
