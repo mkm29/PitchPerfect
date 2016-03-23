@@ -17,24 +17,12 @@ class PlaySoundsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // grab the filepath for the mp3 sound to be played
         
-//        if let path = NSBundle.mainBundle().pathForResource("movie_quote", ofType: "mp3") {
-//            let url = NSURL(fileURLWithPath: path)
-//            
-//            do {
-//                // preoare the sound to be played whenever the button is pressed
-//                audioPlayer = try AVAudioPlayer(contentsOfURL: url)
-//                audioPlayer.enableRate = true
-//            } catch {
-//                
-//            }
-//        }
+        audioEngine = AVAudioEngine()
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: recordedAudio.filePath)
             audioPlayer.enableRate = true
-            //audioEngine = AVAudioEngine()
         } catch {
             
         }
@@ -56,7 +44,25 @@ class PlaySoundsViewController: UIViewController {
     }
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
+        
+        var pitchPlayer = AVAudioPlayerNode()
+        var timePitch = AVAudioUnitTimePitch()
+        
+        timePitch.pitch = 1000
+        
+        audioEngine.attachNode(pitchPlayer)
+        audioEngine.attachNode(timePitch)
         print("Play sound with high pitch")
+        
+        // need to create an NSURL from the recordedAudio.filePath
+        let audioFile = try! AVAudioFile(forReading: recordedAudio.filePath)
+        
+        audioEngine.connect(pitchPlayer, to: timePitch, format: audioFile.processingFormat)
+        audioEngine.connect(timePitch, to: audioEngine.outputNode, format: audioFile.processingFormat)
+        pitchPlayer.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        try! audioEngine.start()
+        pitchPlayer.play()
+        
     }
     
     @IBAction func stopAudio(sender: UIButton) {
