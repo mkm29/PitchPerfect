@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0gv-at-hKH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="0gv-at-hKH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -90,8 +90,12 @@
                                     <action selector="playSoundSlow:" destination="o4d-Us-1h6" eventType="touchUpInside" id="in0-XX-JlL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-n0-HYb">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbe-n0-HYb">
                                 <rect key="frame" x="225" y="96" width="130" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="F49-dx-9uT"/>
+                                    <constraint firstAttribute="height" constant="100" id="h35-8e-bay"/>
+                                </constraints>
                                 <state key="normal" image="fast@2x-iphone"/>
                                 <connections>
                                     <action selector="playSoundFast:" destination="o4d-Us-1h6" eventType="touchUpInside" id="Fq5-UA-yTa"/>
@@ -110,6 +114,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mU9-Vf-KQW">
                                 <rect key="frame" x="43" y="218" width="130" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Hm9-nx-Qm5"/>
+                                    <constraint firstAttribute="width" constant="130" id="tEm-4V-mvs"/>
+                                </constraints>
                                 <state key="normal" image="chipmunk@2x-iphone"/>
                                 <connections>
                                     <action selector="playChipmunkAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="o5o-tR-rsy"/>
@@ -118,7 +126,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="hbe-n0-HYb" firstAttribute="leading" secondItem="fbQ-wO-K6o" secondAttribute="trailing" constant="52" id="5no-Ea-20h"/>
                             <constraint firstItem="mU9-Vf-KQW" firstAttribute="top" secondItem="fbQ-wO-K6o" secondAttribute="bottom" constant="22" id="dYQ-3r-ts3"/>
+                            <constraint firstItem="hbe-n0-HYb" firstAttribute="top" secondItem="gJH-Ha-Vka" secondAttribute="bottom" constant="32" id="pH3-Hn-McV"/>
                             <constraint firstItem="mU9-Vf-KQW" firstAttribute="leading" secondItem="2MF-lJ-Oxz" secondAttribute="leadingMargin" constant="23" id="wcD-cV-tU9"/>
                         </constraints>
                     </view>
