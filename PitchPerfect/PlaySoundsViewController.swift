@@ -45,24 +45,44 @@ class PlaySoundsViewController: UIViewController {
     
     @IBAction func playChipmunkAudio(sender: UIButton) {
         
-        var pitchPlayer = AVAudioPlayerNode()
-        var timePitch = AVAudioUnitTimePitch()
+//        var pitchPlayer = AVAudioPlayerNode()
+//        var timePitch = AVAudioUnitTimePitch()
+//        
+//        timePitch.pitch = 1000
+//        
+//        audioEngine.attachNode(pitchPlayer)
+//        audioEngine.attachNode(timePitch)
+//        
+//        // need to create an NSURL from the recordedAudio.filePath
+//        let audioFile = try! AVAudioFile(forReading: recordedAudio.filePath)
+//        
+//        audioEngine.connect(pitchPlayer, to: timePitch, format: audioFile.processingFormat)
+//        audioEngine.connect(timePitch, to: audioEngine.outputNode, format: audioFile.processingFormat)
+//        pitchPlayer.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+//        try! audioEngine.start()
+//        pitchPlayer.play()
+        playChipmunkAudioWithVariablePitch(1000)
+    }
+    
+    func playChipmunkAudioWithVariablePitch(pitch: Float) {
+        audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
         
-        timePitch.pitch = 1000
+        var audioPlayerNode = AVAudioPlayerNode()
+        audioEngine.attachNode(audioPlayerNode)
         
-        audioEngine.attachNode(pitchPlayer)
-        audioEngine.attachNode(timePitch)
-        print("Play sound with high pitch")
+        var changePitchEffect = AVAudioUnitTimePitch()
+        changePitchEffect.pitch = pitch
+        audioEngine.attachNode(changePitchEffect)
         
-        // need to create an NSURL from the recordedAudio.filePath
+        audioEngine.connect(audioPlayerNode, to: changePitchEffect, format: nil)
+        audioEngine.connect(changePitchEffect, to: audioEngine.outputNode, format: nil)
+        
         let audioFile = try! AVAudioFile(forReading: recordedAudio.filePath)
-        
-        audioEngine.connect(pitchPlayer, to: timePitch, format: audioFile.processingFormat)
-        audioEngine.connect(timePitch, to: audioEngine.outputNode, format: audioFile.processingFormat)
-        pitchPlayer.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
+        audioPlayerNode.scheduleFile(audioFile, atTime: nil, completionHandler: nil)
         try! audioEngine.start()
-        pitchPlayer.play()
-        
+        audioPlayerNode.play()
     }
     
     @IBAction func stopAudio(sender: UIButton) {
