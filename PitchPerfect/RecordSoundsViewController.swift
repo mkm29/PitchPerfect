@@ -69,9 +69,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // the audio recording is now finished, 
         // first save the recording
         if flag {
-            recordedAudio = RecordedAudio()
-            recordedAudio.filePath = recorder.url
-            recordedAudio.title = recorder.url.lastPathComponent
+            recordedAudio = RecordedAudio(path: recorder.url, title: recorder.url.lastPathComponent!)
             
             
             // then segue to the next scene
