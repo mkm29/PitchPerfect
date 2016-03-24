@@ -56,10 +56,10 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         
-        var audioPlayerNode = AVAudioPlayerNode()
+        let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         
-        var changePitchEffect = AVAudioUnitTimePitch()
+        let changePitchEffect = AVAudioUnitTimePitch()
         changePitchEffect.pitch = pitch
         audioEngine.attachNode(changePitchEffect)
         
@@ -80,9 +80,10 @@ class PlaySoundsViewController: UIViewController {
     
     func playSoundAtRate(rate: Float) {
         audioPlayer.stop()
+        audioEngine.stop()
+        audioEngine.reset()
         audioPlayer.currentTime = 0.0
         audioPlayer.rate = rate
-        //audioPlayer.enableRate = true
         audioPlayer.play()
     }
     
