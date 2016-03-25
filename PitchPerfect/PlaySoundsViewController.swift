@@ -56,6 +56,7 @@ class PlaySoundsViewController: UIViewController {
         audioEngine.stop()
         audioEngine.reset()
         
+        
         let audioPlayerNode = AVAudioPlayerNode()
         audioEngine.attachNode(audioPlayerNode)
         

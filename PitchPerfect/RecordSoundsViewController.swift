@@ -26,6 +26,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     override func viewWillAppear(animated: Bool) {
+        // hide the progess label and the stop button when the view first appears
         progressLabel.hidden = true
         stopButton.hidden = true
     }
@@ -44,18 +45,21 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
         
-        //let currentDateTime = NSDate()
-        //let formatter = NSDateFormatter()
-        //formatter.dateFormat = "ddMMyyyy-HHmmss"
-        //let recordingName = formatter.stringFromDate(currentDateTime)+".wav"
-        
         let recordingName = "my_audio.wav"
         let pathArray = [dirPath, recordingName]
         let filePath = NSURL.fileURLWithPathComponents(pathArray)
-        print(filePath)
+        //print(filePath)
         
+        // need a session in order to record and play back audio
         let session = AVAudioSession.sharedInstance()
+        
         try! session.setCategory(AVAudioSessionCategoryPlayAndRecord)
+        do{
+            //Found this implemetation of AVAudiosessionPortOverride due to quietness during playback
+            try session.overrideOutputAudioPort(AVAudioSessionPortOverride.Speaker)
+        }catch{
+            print("could not set output to speaker")
+        }
         
         try! audioRecorder = AVAudioRecorder(URL: filePath!, settings: [:])
         audioRecorder.delegate = self
@@ -70,8 +74,6 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // first save the recording
         if flag {
             recordedAudio = RecordedAudio(path: recorder.url, title: recorder.url.lastPathComponent!)
-            
-            
             // then segue to the next scene
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else {
