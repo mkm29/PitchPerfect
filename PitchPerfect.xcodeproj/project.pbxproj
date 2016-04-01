@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3D6A1B1CAEEB860043ADE3 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3D6A1A1CAEEB860043ADE3 /* RecordedAudio.swift */; };
 		2A4A1B1F1C977C3800B1FEB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A1B1E1C977C3800B1FEB6 /* AppDelegate.swift */; };
 		2A4A1B211C977C3800B1FEB6 /* RecordSoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A1B201C977C3800B1FEB6 /* RecordSoundsViewController.swift */; };
 		2A4A1B241C977C3800B1FEB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A4A1B221C977C3800B1FEB6 /* Main.storyboard */; };
@@ -16,7 +17,6 @@
 		2A4A1B3F1C977C3800B1FEB6 /* PitchPerfectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A4A1B3E1C977C3800B1FEB6 /* PitchPerfectUITests.swift */; };
 		2AB2D2BD1C9DDB0700B8C8DE /* PlaySoundsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB2D2BC1C9DDB0700B8C8DE /* PlaySoundsViewController.swift */; };
 		2AB2D2BF1C9DDE4500B8C8DE /* movie_quote.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2AB2D2BE1C9DDE4500B8C8DE /* movie_quote.mp3 */; };
-		2AC74FCE1C9F9D77000A6F90 /* RecordedAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC74FCD1C9F9D77000A6F90 /* RecordedAudio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A3D6A1A1CAEEB860043ADE3 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 		2A4A1B1B1C977C3800B1FEB6 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A4A1B1E1C977C3800B1FEB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A4A1B201C977C3800B1FEB6 /* RecordSoundsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordSoundsViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		2A4A1B401C977C3800B1FEB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AB2D2BC1C9DDB0700B8C8DE /* PlaySoundsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaySoundsViewController.swift; sourceTree = "<group>"; };
 		2AB2D2BE1C9DDE4500B8C8DE /* movie_quote.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = movie_quote.mp3; sourceTree = "<group>"; };
-		2AC74FCD1C9F9D77000A6F90 /* RecordedAudio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordedAudio.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,8 +106,8 @@
 				2A4A1B1E1C977C3800B1FEB6 /* AppDelegate.swift */,
 				2A4A1B201C977C3800B1FEB6 /* RecordSoundsViewController.swift */,
 				2A4A1B221C977C3800B1FEB6 /* Main.storyboard */,
-				2AC74FCD1C9F9D77000A6F90 /* RecordedAudio.swift */,
 				2AB2D2BC1C9DDB0700B8C8DE /* PlaySoundsViewController.swift */,
+				2A3D6A1A1CAEEB860043ADE3 /* RecordedAudio.swift */,
 				2A4A1B251C977C3800B1FEB6 /* Assets.xcassets */,
 				2AB2D2C01C9DE1F100B8C8DE /* Supporting Files */,
 				2A4A1B271C977C3800B1FEB6 /* LaunchScreen.storyboard */,
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AC74FCE1C9F9D77000A6F90 /* RecordedAudio.swift in Sources */,
+				2A3D6A1B1CAEEB860043ADE3 /* RecordedAudio.swift in Sources */,
 				2A4A1B211C977C3800B1FEB6 /* RecordSoundsViewController.swift in Sources */,
 				2AB2D2BD1C9DDB0700B8C8DE /* PlaySoundsViewController.swift in Sources */,
 				2A4A1B1F1C977C3800B1FEB6 /* AppDelegate.swift in Sources */,

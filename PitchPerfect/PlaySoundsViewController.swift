@@ -11,42 +11,33 @@ import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
     
-    var audioPlayer = AVAudioPlayer()
-    var recordedAudio: RecordedAudio!
+    var recordedAudio: NSURL!
+    var audioFile: AVAudioFile!
     var audioEngine: AVAudioEngine!
+    var audioPlayerNode: AVAudioPlayerNode!
+    var stopTimer: NSTimer!
     
     @IBOutlet weak var snailButton: UIButton!
     @IBOutlet weak var rabbitButton: UIButton!
     @IBOutlet weak var chipmunkButton: UIButton!
     @IBOutlet weak var darthVaderButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
-    
+    @IBOutlet weak var echoButton: UIButton!
+    @IBOutlet weak var reverbButton: UIButton!
     
     enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, Vader }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        audioEngine = AVAudioEngine()
-        
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOfURL: recordedAudio.filePath)
-            audioPlayer.enableRate = true
-        } catch {
-            
-        }
     }
     
-    @IBAction func playSoundFromButton(sender: UIButton) {
+    @IBAction func playSoundForButton(sender: UIButton) {
         print("Play sound from button tapped")
     }
     
-    @IBAction func stopAudio(sender: UIButton) {
-        if audioPlayer.playing {
-            audioPlayer.stop()
-        }
+    @IBAction func stopButtonPressed(sender: AnyObject) {
+        print("Stop button pressed")
     }
-    
     /*
     // MARK: - Navigation
 

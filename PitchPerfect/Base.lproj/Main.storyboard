@@ -47,7 +47,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ksf-La-AIo" firstAttribute="top" secondItem="dZV-5s-vz1" secondAttribute="bottom" constant="8" id="DJV-3V-Sb1"/>
                             <constraint firstItem="dZV-5s-vz1" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SHu-1K-mcG"/>
@@ -92,14 +92,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <state key="normal" image="SlowButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="4JS-EX-Z6z"/>
+                                                    <action selector="playSoundForButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="yd8-Su-dy3"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-t7-YGn" userLabel="RabbitButton">
                                                 <rect key="frame" x="172" y="0.0" width="171" height="151"/>
                                                 <state key="normal" image="FastButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="HHK-cJ-cbg"/>
+                                                    <action selector="playSoundForButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="nQ2-9S-a3K"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -111,14 +111,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <state key="normal" image="ChipmunkButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="ZJk-tm-Fwe"/>
+                                                    <action selector="playSoundForButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="ajB-zL-wnQ"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-ce-4JN" userLabel="DarthVaderButton">
                                                 <rect key="frame" x="172" y="0.0" width="171" height="151"/>
                                                 <state key="normal" image="DarthVaderButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="p2X-uI-780"/>
+                                                    <action selector="playSoundForButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="Y3T-hx-x46"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -130,14 +130,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="150"/>
                                                 <state key="normal" image="EchoButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="XjV-Fs-uj3"/>
+                                                    <action selector="playSoundForButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="I0c-Ud-zze"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixf-vR-8hD" userLabel="ReverbButton">
                                                 <rect key="frame" x="172" y="0.0" width="171" height="150"/>
                                                 <state key="normal" image="ReverbButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="GQV-id-Y7n"/>
+                                                    <action selector="playSoundForButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="NYl-ee-8tj"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -149,7 +149,7 @@
                                                 <rect key="frame" x="0.0" y="51" width="343" height="50"/>
                                                 <state key="normal" image="StopButton"/>
                                                 <connections>
-                                                    <action selector="stopAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="FqF-Vp-Wcf"/>
+                                                    <action selector="stopButtonPressed:" destination="o4d-Us-1h6" eventType="touchUpInside" id="dnh-By-8Wk"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -168,7 +168,9 @@
                     <connections>
                         <outlet property="chipmunkButton" destination="Wup-dK-WJK" id="uBX-ac-kbm"/>
                         <outlet property="darthVaderButton" destination="ld7-ce-4JN" id="DdE-Xn-Ohu"/>
+                        <outlet property="echoButton" destination="klh-wq-esH" id="jAY-Wg-eUo"/>
                         <outlet property="rabbitButton" destination="zJI-t7-YGn" id="vET-fm-V8U"/>
+                        <outlet property="reverbButton" destination="Ixf-vR-8hD" id="WLy-tA-FPl"/>
                         <outlet property="snailButton" destination="Nx1-eu-SHb" id="zuU-kb-uK3"/>
                         <outlet property="stopButton" destination="7Sh-5l-xgj" id="pyO-0v-c0K"/>
                     </connections>

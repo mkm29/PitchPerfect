@@ -103,7 +103,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             
             // now we must pass in the recordedAudio data
             let data = sender as! RecordedAudio
-            playSoundsVC.recordedAudio = data
+            //playSoundsVC.recordedAudio = data
         }
     }
     
