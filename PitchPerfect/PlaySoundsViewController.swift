@@ -42,16 +42,22 @@ class PlaySoundsViewController: UIViewController {
         switch(ButtonType(rawValue: sender.tag)!) {
         case .Slow:
             print("Play sound slow")
+            playSound(rate: 0.5)
         case .Fast:
             print("Play sound fast")
+            playSound(rate: 1.5)
         case .Chipmunk:
             print("Play sound as chipmunk")
+            playSound(pitch: 1000)
         case .Vader:
             print("play sound as darth vader")
+            playSound(pitch: -1000)
         case .Echo:
             print("echo sound")
+            playSound(echo: true)
         case .Reverb:
             print("reverb sound")
+            playSound(reverb: true)
         }
         
         configureUI(.Playing)
