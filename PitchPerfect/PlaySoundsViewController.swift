@@ -15,6 +15,15 @@ class PlaySoundsViewController: UIViewController {
     var recordedAudio: RecordedAudio!
     var audioEngine: AVAudioEngine!
     
+    @IBOutlet weak var snailButton: UIButton!
+    @IBOutlet weak var rabbitButton: UIButton!
+    @IBOutlet weak var chipmunkButton: UIButton!
+    @IBOutlet weak var darthVaderButton: UIButton!
+    @IBOutlet weak var stopButton: UIButton!
+    
+    
+    enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, Vader }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
