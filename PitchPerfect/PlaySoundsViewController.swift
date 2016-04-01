@@ -25,15 +25,36 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var echoButton: UIButton!
     @IBOutlet weak var reverbButton: UIButton!
     
-    enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, Vader }
+    enum ButtonType: Int { case Slow = 0, Fast, Chipmunk, Vader, Echo, Reverb }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
     }
     
+    override func viewWillAppear(animated: Bool) {
+        configureUI(.NotPlaying)
+    }
+    
     @IBAction func playSoundForButton(sender: UIButton) {
-        print("Play sound from button tapped")
+        //print("Play sound from button tapped")
+        
+        switch(ButtonType(rawValue: sender.tag)!) {
+        case .Slow:
+            print("Play sound slow")
+        case .Fast:
+            print("Play sound fast")
+        case .Chipmunk:
+            print("Play sound as chipmunk")
+        case .Vader:
+            print("play sound as darth vader")
+        case .Echo:
+            print("echo sound")
+        case .Reverb:
+            print("reverb sound")
+        }
+        
+        configureUI(.Playing)
     }
     
     @IBAction func stopButtonPressed(sender: AnyObject) {

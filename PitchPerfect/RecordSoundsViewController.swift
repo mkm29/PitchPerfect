@@ -19,6 +19,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     var recordedAudio: RecordedAudio!
     
+    var recordedAudioURL: NSURL!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -73,9 +75,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // the audio recording is now finished, 
         // first save the recording
         if flag {
-            recordedAudio = RecordedAudio(path: recorder.url, title: recorder.url.lastPathComponent!)
+            recordedAudioURL = recorder.url
+            //recordedAudio = RecordedAudio(path: recorder.url, title: recorder.url.lastPathComponent!)
             // then segue to the next scene
-            self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
+            self.performSegueWithIdentifier("stopRecording", sender: recorder.url)
         } else {
             print("Recording did not finish successfully")
             recordButton.enabled = true
@@ -100,10 +103,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // pass in the recorded audio
         if segue.identifier == "stopRecording" {
             let playSoundsVC:PlaySoundsViewController = segue.destinationViewController as! PlaySoundsViewController
-            
+            playSoundsVC.recordedAudioURL = sender as! NSURL
             // now we must pass in the recordedAudio data
-            let data = sender as! RecordedAudio
-            //playSoundsVC.recordedAudio = data
         }
     }
     
