@@ -167,12 +167,12 @@
                     </view>
                     <connections>
                         <outlet property="chipmunkButton" destination="Wup-dK-WJK" id="uBX-ac-kbm"/>
-                        <outlet property="darthVaderButton" destination="ld7-ce-4JN" id="DdE-Xn-Ohu"/>
                         <outlet property="echoButton" destination="klh-wq-esH" id="jAY-Wg-eUo"/>
                         <outlet property="rabbitButton" destination="zJI-t7-YGn" id="vET-fm-V8U"/>
                         <outlet property="reverbButton" destination="Ixf-vR-8hD" id="WLy-tA-FPl"/>
                         <outlet property="snailButton" destination="Nx1-eu-SHb" id="zuU-kb-uK3"/>
                         <outlet property="stopButton" destination="7Sh-5l-xgj" id="pyO-0v-c0K"/>
+                        <outlet property="vaderButton" destination="ld7-ce-4JN" id="jF9-6M-h7z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCv-4d-eFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
