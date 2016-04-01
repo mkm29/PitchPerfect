@@ -92,14 +92,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <state key="normal" image="SlowButton"/>
                                                 <connections>
-                                                    <action selector="playSoundSlow:" destination="o4d-Us-1h6" eventType="touchUpInside" id="8Mf-z4-jIA"/>
+                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="4JS-EX-Z6z"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-t7-YGn" userLabel="RabbitButton">
                                                 <rect key="frame" x="172" y="0.0" width="171" height="151"/>
                                                 <state key="normal" image="FastButton"/>
                                                 <connections>
-                                                    <action selector="playSoundFast:" destination="o4d-Us-1h6" eventType="touchUpInside" id="fr9-NG-5qq"/>
+                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="HHK-cJ-cbg"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -111,14 +111,14 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="151"/>
                                                 <state key="normal" image="ChipmunkButton"/>
                                                 <connections>
-                                                    <action selector="playChipmunkAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="vVa-DL-4mb"/>
+                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="ZJk-tm-Fwe"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ld7-ce-4JN" userLabel="DarthVaderButton">
                                                 <rect key="frame" x="172" y="0.0" width="171" height="151"/>
                                                 <state key="normal" image="DarthVaderButton"/>
                                                 <connections>
-                                                    <action selector="playDarthVaderAudio:" destination="o4d-Us-1h6" eventType="touchUpInside" id="itS-SQ-9q5"/>
+                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="p2X-uI-780"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -129,10 +129,16 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klh-wq-esH" userLabel="EchoButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="172" height="150"/>
                                                 <state key="normal" image="EchoButton"/>
+                                                <connections>
+                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="XjV-Fs-uj3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ixf-vR-8hD" userLabel="ReverbButton">
                                                 <rect key="frame" x="172" y="0.0" width="171" height="150"/>
                                                 <state key="normal" image="ReverbButton"/>
+                                                <connections>
+                                                    <action selector="playSoundFromButton:" destination="o4d-Us-1h6" eventType="touchUpInside" id="GQV-id-Y7n"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
